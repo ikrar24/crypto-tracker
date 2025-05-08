@@ -2,12 +2,15 @@
   width: 100%;
   padding: 1rem;
   overflow-x: hidden;
-  border:2px solid red;
+  
+  display:flex;
+  justify-content: center;
+  aling-item: centre;
 }
 
 .table-wrapper {
   overflow-x: auto;
-  border:2px solid black;
+  
 }
 
 table {
