@@ -1,29 +1,37 @@
 .crypto-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-  }
-  
+  width: 100%;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
   table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+    font-size: 0.75rem;
   }
-  
+
   th, td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-    vertical-align: middle;
+    padding: 6px;
   }
-  
-  .name {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-  
-  
-  span {
-    vertical-align: middle;
-  }
-  
+}
