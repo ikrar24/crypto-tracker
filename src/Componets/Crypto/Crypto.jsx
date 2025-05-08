@@ -40,39 +40,52 @@ function Crypto({ searchTerm }) {
           </tr>
         </thead>
         <tbody>
-          {filteredData.map((coin) => (
-            <tr key={coin.id}>
-              <td>
-                <img src={coin.image} alt={coin.name} className="name" />
-                <span>{coin.symbol.toUpperCase()}</span>
-              </td>
-              <td>₹{coin.current_price.toLocaleString()}</td>
-              <td>
-                <div style={{ width: "80px", height: "40px" }}>
-                  <Line
-                    data={{
-                      labels: coin.sparkline_in_7d.price.map((_, i) => i),
-                      datasets: [
-                        {
-                          data: coin.sparkline_in_7d.price,
-                          borderColor: "#00c853",
-                          borderWidth: 1, // thin line
-                          tension: 0.4,
-                          pointRadius: 0, // no dots
-                        },
-                      ],
-                    }}
-                    options={{
-                      plugins: { legend: { display: false } },
-                      scales: { x: { display: false }, y: { display: false } },
-                      responsive: true,
-                      maintainAspectRatio: false,
-                    }}
-                  />
-                </div>
+          {filteredData.length === 0 ? (
+            <tr>
+              <td colSpan="3" style={{ textAlign: "center" }}>
+                <img
+                  src="https://media.tenor.com/NOYF3f82b_gAAAAC/not-found.gif"
+                  alt="Not Found"
+                  style={{ width: "200px", margin: "20px auto" }}
+                />
+                <p>No results found</p>
               </td>
             </tr>
-          ))}
+          ) : (
+            filteredData.map((coin) => (
+              <tr key={coin.id}>
+                <td>
+                  <img src={coin.image} alt={coin.name} className="name" />
+                  <span>{coin.symbol.toUpperCase()}</span>
+                </td>
+                <td>₹{coin.current_price.toLocaleString()}</td>
+                <td>
+                  <div style={{ width: "80px", height: "40px" }}>
+                    <Line
+                      data={{
+                        labels: coin.sparkline_in_7d.price.map((_, i) => i),
+                        datasets: [
+                          {
+                            data: coin.sparkline_in_7d.price,
+                            borderColor: "#00c853",
+                            borderWidth: 1,
+                            tension: 0.4,
+                            pointRadius: 0,
+                          },
+                        ],
+                      }}
+                      options={{
+                        plugins: { legend: { display: false } },
+                        scales: { x: { display: false }, y: { display: false } },
+                        responsive: true,
+                        maintainAspectRatio: false,
+                      }}
+                    />
+                  </div>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>
