@@ -1,0 +1,87 @@
+/* header Css */
+
+header{
+    /* border: 2px solid red; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* nav{
+    border: 2px solid black;
+
+} */
+
+
+ul{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.SearchBox{
+    /* border: 2px solid brown; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+li{
+    list-style: none;
+}
+
+
+
+/* input Desing */
+
+.searchInput{
+    width: 70%;
+    padding: 10px;
+    border-radius: 3px;
+    margin-right: 10px;
+    /* border: black 1px solid; */
+    border: none;
+    outline: none;
+    background-color: rgb(218, 218, 218);
+}
+
+.searchBtn{
+    padding: 10px 15px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Responsive css */
+
+@media screen and (max-width:480px) {
+
+ 
+.searchInput{
+    width: 50%;
+    padding: 7px;
+    border-radius: 3px;
+    margin-right: 10px;
+    /* border: black 1px solid; */
+    border: none;
+    outline: none;
+    background-color: rgb(218, 218, 218);
+}
+
+.searchBtn{
+    padding: 7px 10px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}   
+
+    
+}
