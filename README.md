@@ -1,36 +1,24 @@
-# 🪙 Crypto Tracker App (INR Based)
+# Crypto Tracker App
 
-A sleek and minimal React-based Crypto Tracker that fetches real-time cryptocurrency data in **Indian Rupees (INR)** using the [CoinGecko API](https://www.coingecko.com/en/api), and displays a 7-day mini chart for each coin.
+A real-time cryptocurrency tracker built with **React.js** that fetches data from the [CoinGecko API](https://www.coingecko.com/en/api). It displays top cryptocurrencies with dynamic charts, percentage changes, market data, and live updates every second.
 
----
+## Features
 
-## ✨ Features
+- **Live Cryptocurrency Prices**
+- **Real-time auto-refresh (every 1s)**
+- Filter/Search by crypto name
+- Percentage change (1h, 24h, 7d) with color indicators
+- Interactive sparkline **7D mini charts**
+- Fully responsive design for mobile & desktop
 
-- 🔍 **Search Functionality** — Instantly filter crypto by name via top navbar.
-- 📉 **Mini Line Charts** — Clean 7-day sparkline charts for quick trend overview.
-- 🇮🇳 **INR Currency Support** — Prices displayed in Indian Rupees.
-- 📊 **Top 5 Cryptos** — Focused view of the top 5 coins by market cap.
-- ⚡ **Fast & Lightweight** — Uses `fetch`, no external state managers or Axios.
+## Tech Stack
 
----
+- **React.js**
+- **Chart.js** & `react-chartjs-2`
+- **CoinGecko API**
+- **CSS3 (Custom Responsive Design)**
 
-## 🖥️ Screenshots
-
-| Search & Display | Responsive Chart |
-|------------------|------------------|
-| ![screenshot](./assets/screenshot1.png) | ![chart](./assets/chart.png) |
-
----
-
-## 🚀 Tech Stack
-
-- **Frontend**: React.js (Vite or Create React App)
-- **Charting**: Chart.js with react-chartjs-2
-- **Styling**: Custom CSS
-
----
-
-## 📦 Installation
+## Installation
 
 ```bash
 git clone https://github.com/ikrar24/crypto-tracker.git
